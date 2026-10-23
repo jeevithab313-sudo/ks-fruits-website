@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" width="320" height="80">
+  <defs>
+    <linearGradient id="ksfGreen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c3823" />
+      <stop offset="100%" stop-color="#1b5e3a" />
+    </linearGradient>
+    <linearGradient id="ksfGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f7b731" />
+      <stop offset="100%" stop-color="#d99000" />
+    </linearGradient>
+  </defs>
+  <!-- Emblem Icon -->
+  <g transform="translate(10, 8)">
+    <!-- Natural leaf shape 1 -->
+    <path d="M 32 6 C 18 10 8 24 10 42 C 18 40 28 34 34 26 C 36 22 34 14 32 6 Z" fill="url(#ksfGreen)" />
+    <!-- Citrus droplet / fruit arc in gold -->
+    <path d="M 34 24 C 44 26 54 36 50 52 C 40 56 26 54 20 44 C 26 40 32 32 34 24 Z" fill="url(#ksfGold)" />
+    <!-- Center brine droplet -->
+    <path d="M 32 20 C 35 25 40 33 40 38 C 40 43 36 46 32 46 C 28 46 24 43 24 38 C 24 33 29 25 32 20 Z" fill="#ffffff" opacity="0.9" />
+    <circle cx="32" cy="38" r="3.5" fill="#1b5e3a" />
+    <!-- Base branch/leaf swirl -->
+    <path d="M 12 50 C 22 58 42 58 52 48" stroke="#0c3823" stroke-width="3" stroke-linecap="round" fill="none" />
+  </g>
+  <!-- Company Typography -->
+  <text x="82" y="38" font-family="'Plus Jakarta Sans', 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif" font-weight="900" font-size="28" fill="#0c3823" letter-spacing="1">K.S. FRUITS</text>
+  <text x="83" y="55" font-family="'Plus Jakarta Sans', 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif" font-weight="700" font-size="9.5" fill="#d99000" letter-spacing="2.2">FRUIT PROCESSING &amp; BRINE PRODUCTS</text>
+  <text x="83" y="69" font-family="'Segoe UI', Roboto, sans-serif" font-weight="500" font-size="8.5" fill="#4a5568" letter-spacing="0.8">BARGUR, TAMIL NADU • GSTIN: 33FMQPK2704G1Z3</text>
+</svg>
