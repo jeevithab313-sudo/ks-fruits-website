@@ -88,6 +88,7 @@ function initHomepageCarousel() {
     if (dots.length) {
       dots.forEach((dot, dotIndex) => {
         dot.classList.toggle('active', dotIndex === activeIndex);
+        dot.setAttribute('aria-pressed', dotIndex === activeIndex ? 'true' : 'false');
       });
     }
     if (currentCount) {

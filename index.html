@@ -38,8 +38,8 @@
     </div>
   </aside>
 
-  <!-- Main Navigation Header -->
-  <header class="site-header">
+  <!-- Main Navigation Header (Transparent Over Hero) -->
+  <header class="site-header is-transparent">
     <div class="container header-inner">
       <a href="index.html" class="brand-logo" aria-label="K.S. FRUITS Home">
         <img src="assets/images/logo.svg" alt="K.S. FRUITS Logo" width="260" height="65">
@@ -49,8 +49,8 @@
       <nav class="nav-menu" id="primary-navigation" aria-label="Main Navigation">
         <a href="index.html" class="nav-link active">Home</a>
         <a href="about.html" class="nav-link">About Us</a>
-        <a href="products.html" class="nav-link">Our Products</a>
-        <a href="infrastructure.html" class="nav-link">Processing &amp; Infrastructure</a>
+        <a href="products.html" class="nav-link">Products</a>
+        <a href="infrastructure.html" class="nav-link">Our Infrastructure</a>
         <a href="contact.html" class="nav-link">Contact Us</a>
       </nav>
 
@@ -59,7 +59,7 @@
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.456 5.711 1.457h.004c6.554 0 11.89-5.335 11.893-11.893a11.82 11.82 0 00-3.483-8.413z"/></svg>
           <span>WhatsApp</span>
         </a>
-        <button class="btn btn-primary btn-sm" data-open-quote="Mango Brine">Request Quote</button>
+        <button class="btn btn-accent btn-sm" data-open-quote="Mango Brine">Request Quote</button>
       </div>
 
       <!-- Mobile Hamburger Button -->
@@ -69,265 +69,531 @@
     </div>
   </header>
 
-  <!-- Homepage Hero Carousel -->
-  <section class="home-hero" data-home-carousel aria-label="K.S. FRUITS product and processing highlights">
-    <div class="home-hero-slides" aria-hidden="true">
-      <div class="home-hero-slide is-active" data-carousel-slide>
-        <img src="public/images/mango-slices-crate.jpg" alt="" width="1600" height="900" fetchpriority="high">
+  <!-- Hero Banner Section (Carousel with Diagonal Lower Edge) -->
+  <section class="hero-slider-section" data-home-carousel aria-label="Featured Processing Facilities Carousel">
+    <div class="hero-slides-wrapper">
+      <!-- Slide 1: Mango Slices in Crate -->
+      <div class="hero-slide active" data-carousel-slide>
+        <img src="public/images/mango-slices-crate.jpg" alt="Fresh raw mango slices sorted in harvest crates at K.S. FRUITS" class="hero-slide-img">
+        <div class="hero-slide-overlay"></div>
       </div>
-      <div class="home-hero-slide" data-carousel-slide>
-        <img src="public/images/lemon-brine-inspection.png" alt="" width="1600" height="900">
+      <!-- Slide 2: Lemon Brine Hand Inspection -->
+      <div class="hero-slide" data-carousel-slide>
+        <img src="public/images/lemon-brine-inspection.png" alt="Hand inspection of cured lemon pieces from commercial drum at K.S. FRUITS" class="hero-slide-img">
+        <div class="hero-slide-overlay"></div>
       </div>
-      <div class="home-hero-slide" data-carousel-slide>
-        <img src="public/images/narthangai-brine.png" alt="" width="1600" height="900">
+      <!-- Slide 3: Narthangai Brine Tub Curing -->
+      <div class="hero-slide" data-carousel-slide>
+        <img src="public/images/narthangai-brine.png" alt="Authentic wild citron Narthangai curing in natural salt brine tub" class="hero-slide-img">
+        <div class="hero-slide-overlay"></div>
+      </div>
+      <!-- Slide 4: Lemon Salt Curing Drum -->
+      <div class="hero-slide" data-carousel-slide>
+        <img src="public/images/lemon-curing-drum.png" alt="Salt crystals and lemons inside commercial curing barrel at K.S. FRUITS" class="hero-slide-img">
+        <div class="hero-slide-overlay"></div>
+      </div>
+      <!-- Slide 5: Diced Mango Salt Layering -->
+      <div class="hero-slide" data-carousel-slide>
+        <img src="public/images/mango-diced-curing.jpg" alt="Diced raw green mango cuts cured in pure salt crystals at K.S. FRUITS" class="hero-slide-img">
+        <div class="hero-slide-overlay"></div>
       </div>
     </div>
-    <div class="home-hero-overlay"></div>
 
-    <div class="container home-hero-content">
-      <span class="home-hero-eyebrow">K.S. FRUITS <span aria-hidden="true">|</span> BARGUR, TAMIL NADU</span>
-      <h1>Quality Fruit Brine,<br>Rooted in <span>Tradition.</span></h1>
-      <p>Mango, lemon and narthangai brine, thoughtfully prepared in Bargur for commercial food processors.</p>
-      <div class="home-hero-actions">
+    <!-- Hero Content Overlay -->
+    <div class="container hero-content-container">
+      <div class="hero-pill-badge">
+        <span class="hero-pill-dot"></span>
+        <span>Agricultural Food Processing • Tamil Nadu, India</span>
+      </div>
+      <h1 class="hero-main-title">Welcome to KS Fruits</h1>
+      <p class="hero-subheading">Quality Brine Products, Naturally Preserved</p>
+      <p class="hero-lead-desc">
+        Discover our range of carefully processed mango brine and lemon brine products, prepared with a focus on quality, consistency, and customer satisfaction.
+      </p>
+
+      <div class="hero-button-group">
         <a href="products.html" class="btn btn-accent btn-lg">Explore Our Products</a>
-        <a href="contact.html" class="btn home-hero-contact btn-lg">Contact Us</a>
+        <a href="contact.html" class="btn btn-outline-white btn-lg">Contact Us</a>
+      </div>
+
+      <div class="hero-trust-bar">
+        <div class="hero-trust-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>Bargur, Krishnagiri District</span>
+        </div>
+        <div class="hero-trust-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          <span>100% Natural Salt Brine</span>
+        </div>
+        <div class="hero-trust-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 7h-7L10 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/></svg>
+          <span>GSTIN: 33FMQPK2704G1Z3</span>
+        </div>
       </div>
     </div>
 
-    <div class="home-hero-controls" aria-label="Carousel controls">
-      <button class="home-hero-arrow" type="button" data-carousel-prev aria-label="Previous slide">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
-      </button>
-      <span class="home-hero-count" aria-live="polite"><span data-carousel-current>01</span> / 03</span>
-      <button class="home-hero-arrow" type="button" data-carousel-next aria-label="Next slide">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
-      </button>
+    <!-- Carousel Arrow Buttons -->
+    <button type="button" class="hero-nav-arrow hero-arrow-prev" data-carousel-prev aria-label="Previous Slide">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+    </button>
+    <button type="button" class="hero-nav-arrow hero-arrow-next" data-carousel-next aria-label="Next Slide">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+    </button>
+
+    <!-- Carousel Indicator Dots -->
+    <div class="hero-carousel-dots" role="group" aria-label="Choose carousel slide">
+      <button type="button" class="hero-dot active" aria-label="Slide 1" aria-pressed="true" data-carousel-dot></button>
+      <button type="button" class="hero-dot" aria-label="Slide 2" aria-pressed="false" data-carousel-dot></button>
+      <button type="button" class="hero-dot" aria-label="Slide 3" aria-pressed="false" data-carousel-dot></button>
+      <button type="button" class="hero-dot" aria-label="Slide 4" aria-pressed="false" data-carousel-dot></button>
+      <button type="button" class="hero-dot" aria-label="Slide 5" aria-pressed="false" data-carousel-dot></button>
     </div>
-  </section>
 
-  <!-- About Snapshot Section -->
-  <section class="section section-bg-light">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-subtitle">About K.S. FRUITS</span>
-        <h2 class="section-title">Rooted in Tamil Nadu's Premier Fruit Region</h2>
-        <p class="section-description">
-          Located in Bargur within the Krishnagiri district of Tamil Nadu, K.S. FRUITS processes raw agricultural produce into clean, preserved fruit brine for food businesses and commercial supply.
-        </p>
-      </div>
-
-      <div class="feature-cards-grid">
-        <div class="feature-box">
-          <div class="feature-icon-wrapper">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-          </div>
-          <h3>Fresh Farm Produce</h3>
-          <p>We source raw green mangoes, whole lemons, and indigenous citron (Narthangai) directly from local agricultural growers across the regional farm belt.</p>
-        </div>
-
-        <div class="feature-box">
-          <div class="feature-icon-wrapper">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-          </div>
-          <h3>Traditional Brine Curing</h3>
-          <p>Fruits are washed, graded, and cured using food-grade salt brine solution to retain firmness, texture, and natural characteristics for downstream food processing.</p>
-        </div>
-
-        <div class="feature-box">
-          <div class="feature-icon-wrapper">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 7h-7L10 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/></svg>
-          </div>
-          <h3>Food-Grade Storage</h3>
-          <p>Brined fruits are cured and handled in dedicated food-grade storage drums and vats in an organized and monitored facility environment.</p>
-        </div>
-      </div>
-
-      <!-- Business Credentials Banner -->
-      <div class="credentials-banner">
-        <div class="credentials-text">
-          <h3>Registered Indian Business Entity</h3>
-          <p>Operating under Goods and Services Tax registration at Bargur, Krishnagiri District. We conduct transparent, professional commercial transactions with business partners.</p>
-        </div>
-        <div class="credentials-pill">
-          <span>Official GSTIN</span>
-          <strong>33FMQPK2704G1Z3</strong>
-        </div>
-      </div>
+    <!-- Diagonal Lower Edge (VSR Agro Inspired Shape) -->
+    <div class="hero-diagonal-edge" aria-hidden="true">
+      <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
+        <path d="M0,60 L1440,0 L1440,60 Z" fill="#ffffff"></path>
+      </svg>
     </div>
   </section>
 
-  <!-- Confirmed Products Section (Exactly Three Cards) -->
-  <section class="section" id="products">
+  <!-- Section A: ABOUT KS FRUITS -->
+  <section class="section" id="about-overview">
+    <div class="container">
+      <div class="home-about-grid">
+        <div class="home-about-content">
+          <div class="section-tag" style="margin-bottom: 0.75rem;">
+            <span class="tag-dot"></span>
+            <span>About KS Fruits</span>
+          </div>
+          <h3>Specialized Fruit Brine Processing from Bargur, Tamil Nadu</h3>
+          <p class="home-about-lead">
+            K.S. FRUITS is an established agricultural food-processing and brine-products enterprise based in Bargur, Krishnagiri District, Tamil Nadu. Operating in the heart of South India's renowned mango and citrus cultivation belt, we specialize in hygienic, natural salt-brining of green mangoes, whole lemons, and indigenous citron (Narthangai).
+          </p>
+          <p class="home-about-text">
+            Our facility cures raw fruit pieces under controlled conditions with food-grade salt solution to retain firmness, natural acidity, and batch consistency for commercial pickle manufacturers, food processing plants, and culinary enterprises across India.
+          </p>
+
+          <div class="home-about-highlights">
+            <div class="about-highlight-box">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+              <div>
+                <strong>Direct Farm Sourcing</strong>
+                <span>Procured fresh from orchard growers across Krishnagiri &amp; Dharmapuri</span>
+              </div>
+            </div>
+            <div class="about-highlight-box">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              <div>
+                <strong>Natural Salt Curing</strong>
+                <span>Pure salt-brining without artificial colors or synthetic additives</span>
+              </div>
+            </div>
+            <div class="about-highlight-box">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 7h-7L10 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/></svg>
+              <div>
+                <strong>Verified Business</strong>
+                <span>Registered commercial entity: GSTIN 33FMQPK2704G1Z3</span>
+              </div>
+            </div>
+            <div class="about-highlight-box">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <div>
+                <strong>Direct Facility Support</strong>
+                <span>Transparent facility visit and rapid commercial assistance</span>
+              </div>
+            </div>
+          </div>
+
+          <a href="about.html" class="btn btn-primary btn-md">Learn More About Us</a>
+        </div>
+
+        <div class="home-about-media">
+          <div class="home-about-card">
+            <img src="public/images/lemon-brine-inspection.png" alt="Quality inspection of cured fruit pieces inside curing drum at K.S. FRUITS" width="560" height="420" loading="lazy">
+            <div class="about-floating-tag">
+              <strong>Authentic Facility Inspection</strong>
+              <p>Manual grading and salt-brine inspection in Bargur, Tamil Nadu</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section B: OUR PRODUCTS -->
+  <section class="section section-bg-light" id="products-showcase">
     <div class="container">
       <div class="section-header">
-        <span class="section-subtitle">Our Confirmed Products</span>
+        <span class="section-subtitle">Our Products</span>
         <h2 class="section-title">Commercial Fruit Brine Products</h2>
         <p class="section-description">
-          We focus exclusively on three confirmed brine products, processed with natural salt brine solution for commercial purchasers and industrial food operations.
+          Supplied in food-grade drums and commercial bulk packaging, cured in natural saltwater solution to preserve natural texture, tartness, and flavor.
         </p>
       </div>
 
       <div class="products-grid">
-        <!-- Card 1: Mango Brine -->
-        <article class="product-card">
+        <!-- Product 1: Mango Brine -->
+        <article class="product-card" id="mango">
           <div class="product-card-media">
             <span class="product-pill">Raw Mango</span>
-            <img src="public/images/mango-slices-crate.jpg" alt="Mango Brine - fresh cut raw mango slices in crate" width="400" height="250" loading="lazy">
+            <img src="public/images/mango-slices-crate.jpg" alt="Mango Brine - fresh cut raw mango slices in processing crate at K.S. FRUITS" width="400" height="250" loading="lazy">
           </div>
           <div class="product-card-body">
             <h3 class="product-title">Mango Brine</h3>
             <p class="product-desc">
-              Freshly harvested raw green mango pieces cured in clean natural saltwater brine. Processed under hygienic conditions for industrial food manufacturing and commercial requirements.
+              Fresh raw green mango pieces and uniform slices cured in natural saltwater brine. Preserves firm cellular texture, fresh aroma, and balanced tartness for commercial pickle manufacturing and culinary kitchens.
             </p>
-            <div class="product-card-actions">
-              <button class="btn btn-whatsapp btn-sm" data-product-whatsapp="Mango Brine">
+            <div class="product-features-list">
+              <span class="spec-tag">Firm Cut Texture</span>
+              <span class="spec-tag">Food-Grade Salt Cured</span>
+              <span class="spec-tag">Bulk Supply Available</span>
+            </div>
+            <div class="product-actions-group">
+              <button class="btn btn-whatsapp btn-sm" data-product-whatsapp="Mango Brine" aria-label="Enquire about Mango Brine on WhatsApp">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.456 5.711 1.457h.004c6.554 0 11.89-5.335 11.893-11.893a11.82 11.82 0 00-3.483-8.413z"/></svg>
-                <span>WhatsApp Enquiry</span>
+                <span>WhatsApp</span>
               </button>
-              <div class="product-action-row">
-                <a href="tel:+918489031280" class="btn btn-call btn-sm">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                  <span>Call Us</span>
-                </a>
-                <button class="btn btn-primary btn-sm" data-open-quote="Mango Brine">Enquire</button>
-              </div>
+              <a href="tel:+918489031280" class="btn btn-call btn-sm" aria-label="Call regarding Mango Brine">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <span>Call</span>
+              </a>
+              <button class="btn btn-primary btn-sm" data-open-quote="Mango Brine">Enquire</button>
             </div>
           </div>
         </article>
 
-        <!-- Card 2: Lemon Brine -->
-        <article class="product-card">
+        <!-- Product 2: Lemon Brine -->
+        <article class="product-card" id="lemon">
           <div class="product-card-media">
             <span class="product-pill">Citrus Lemon</span>
-            <img src="public/images/lemon-brine-inspection.png" alt="Lemon Brine - cured cut lemons in drum inspected by hand" width="400" height="250" loading="lazy">
+            <img src="public/images/lemon-brine-inspection.png" alt="Lemon Brine - cured cut lemons in drum inspected by hand at K.S. FRUITS" width="400" height="250" loading="lazy">
           </div>
           <div class="product-card-body">
             <h3 class="product-title">Lemon Brine</h3>
             <p class="product-desc">
-              Clean sorted lemons cured in natural salt brine solution. Preserved using traditional brine curing methods in food-grade containers for commercial and institutional supply.
+              Selected whole and cut lemons cured in natural salt brine solution inside commercial barrels. Delivers uniform brine penetration, steady sourness, and natural preservation without synthetic additives.
             </p>
-            <div class="product-card-actions">
-              <button class="btn btn-whatsapp btn-sm" data-product-whatsapp="Lemon Brine">
+            <div class="product-features-list">
+              <span class="spec-tag">Consistent Acidity</span>
+              <span class="spec-tag">Drum Cured</span>
+              <span class="spec-tag">Commercial Grade</span>
+            </div>
+            <div class="product-actions-group">
+              <button class="btn btn-whatsapp btn-sm" data-product-whatsapp="Lemon Brine" aria-label="Enquire about Lemon Brine on WhatsApp">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.456 5.711 1.457h.004c6.554 0 11.89-5.335 11.893-11.893a11.82 11.82 0 00-3.483-8.413z"/></svg>
-                <span>WhatsApp Enquiry</span>
+                <span>WhatsApp</span>
               </button>
-              <div class="product-action-row">
-                <a href="tel:+918489031280" class="btn btn-call btn-sm">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                  <span>Call Us</span>
-                </a>
-                <button class="btn btn-primary btn-sm" data-open-quote="Lemon Brine">Enquire</button>
-              </div>
+              <a href="tel:+918489031280" class="btn btn-call btn-sm" aria-label="Call regarding Lemon Brine">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <span>Call</span>
+              </a>
+              <button class="btn btn-primary btn-sm" data-open-quote="Lemon Brine">Enquire</button>
             </div>
           </div>
         </article>
 
-        <!-- Card 3: Narthangai Brine -->
-        <article class="product-card">
+        <!-- Product 3: Narthangai Brine -->
+        <article class="product-card" id="narthangai">
           <div class="product-card-media">
             <span class="product-pill">Citron (Narthangai)</span>
-            <img src="public/images/narthangai-brine.png" alt="Narthangai Brine - cut wild citron in natural salt brine tub" width="400" height="250" loading="lazy">
+            <img src="public/images/narthangai-brine.png" alt="Narthangai Brine - cut wild citron in natural salt brine tub at K.S. FRUITS" width="400" height="250" loading="lazy">
           </div>
           <div class="product-card-body">
             <h3 class="product-title">Narthangai Brine</h3>
             <p class="product-desc">
-              Carefully selected wild citron (Narthangai) cured in natural salt brine. Processed to preserve natural zest and citrus texture for commercial culinary applications.
+              Authentic wild citron (Narthangai) cured in traditional saltwater brine. Valued for its robust peel aroma, natural bitter-tang notes, and digestive properties required for traditional culinary processing.
             </p>
-            <div class="product-card-actions">
-              <button class="btn btn-whatsapp btn-sm" data-product-whatsapp="Narthangai Brine (Citron Brine)">
+            <div class="product-features-list">
+              <span class="spec-tag">Heritage Tangy Flavor</span>
+              <span class="spec-tag">Peel Infused</span>
+              <span class="spec-tag">Regional Specialty</span>
+            </div>
+            <div class="product-actions-group">
+              <button class="btn btn-whatsapp btn-sm" data-product-whatsapp="Narthangai Brine" aria-label="Enquire about Narthangai Brine on WhatsApp">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.456 5.711 1.457h.004c6.554 0 11.89-5.335 11.893-11.893a11.82 11.82 0 00-3.483-8.413z"/></svg>
-                <span>WhatsApp Enquiry</span>
+                <span>WhatsApp</span>
               </button>
-              <div class="product-action-row">
-                <a href="tel:+918489031280" class="btn btn-call btn-sm">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                  <span>Call Us</span>
-                </a>
-                <button class="btn btn-primary btn-sm" data-open-quote="Narthangai Brine">Enquire</button>
-              </div>
+              <a href="tel:+918489031280" class="btn btn-call btn-sm" aria-label="Call regarding Narthangai Brine">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <span>Call</span>
+              </a>
+              <button class="btn btn-primary btn-sm" data-open-quote="Narthangai Brine">Enquire</button>
             </div>
           </div>
         </article>
       </div>
+
+      <div style="text-align: center; margin-top: 3rem;">
+        <a href="products.html" class="btn btn-primary btn-lg">Explore Full Product Specifications</a>
+      </div>
     </div>
   </section>
 
-  <!-- Processing & Facility Highlights -->
-  <section class="section section-bg-light">
+  <!-- Section C: OUR INFRASTRUCTURE -->
+  <section class="section" id="infrastructure-gallery">
     <div class="container">
-      <div class="infra-showcase">
-        <div class="infra-image-wrap">
-          <img src="public/images/lemon-curing-drum.png" alt="Cut fruit curing inside commercial drum with salt at K.S. FRUITS" width="560" height="360" loading="lazy">
-          <div class="infra-caption-badge">Drum Curing &amp; Salt Preservation</div>
+      <div class="section-header">
+        <span class="section-subtitle">Our Infrastructure</span>
+        <h2 class="section-title">Hygienic Sourcing, Cutting &amp; Drum-Curing Facilities</h2>
+        <p class="section-description">
+          Authentic company photographs from our daily processing, sorting, and natural brine curing activities at Bargur, Krishnagiri District.
+        </p>
+      </div>
+
+      <div class="gallery-grid-3col">
+        <!-- Photo 1 -->
+        <div class="gallery-card">
+          <div class="gallery-card-media">
+            <img src="public/images/mango-slices-crate.jpg" alt="Raw green mango slices in processing crate at K.S. FRUITS" loading="lazy">
+          </div>
+          <div class="gallery-card-caption">
+            <span class="gallery-card-tag">Mango Processing</span>
+            <p>Fresh raw mangoes sorted into food-grade harvest crates before brine curing.</p>
+          </div>
         </div>
-        <div class="infra-content">
-          <span class="section-subtitle">Systematic Curing Process</span>
-          <h3>Fruit Grading &amp; Salt Brine Preparation</h3>
-          <p>
-            Every batch of incoming fruit is systematically checked, washed with clean water, cut, and layered with pure food-grade salt. Our natural salt brine solutions ensure long-lasting preservation and crisp texture.
-          </p>
-          <div class="infra-points">
-            <div class="infra-point">
-              <span class="infra-point-icon">✓</span>
-              <span>Manual sorting and cutting into uniform slices and dices.</span>
-            </div>
-            <div class="infra-point">
-              <span class="infra-point-icon">✓</span>
-              <span>Controlled food-grade salt application for steady, authentic brine curing.</span>
-            </div>
-            <div class="infra-point">
-              <span class="infra-point-icon">✓</span>
-              <span>Food-grade drum storage with clean, monitored facility practices.</span>
-            </div>
+
+        <!-- Photo 2 -->
+        <div class="gallery-card">
+          <div class="gallery-card-media">
+            <img src="public/images/lemon-brine-inspection.png" alt="Lemon Brine inspection by hand from barrel at K.S. FRUITS" loading="lazy">
+          </div>
+          <div class="gallery-card-caption">
+            <span class="gallery-card-tag">Lemon Brining</span>
+            <p>Manual quality check of cured lemon pieces to verify firm texture and brine saturation.</p>
+          </div>
+        </div>
+
+        <!-- Photo 3 -->
+        <div class="gallery-card">
+          <div class="gallery-card-media">
+            <img src="public/images/narthangai-brine.png" alt="Narthangai Citron Brine in blue curing tub at K.S. FRUITS" loading="lazy">
+          </div>
+          <div class="gallery-card-caption">
+            <span class="gallery-card-tag">Citron Curing</span>
+            <p>Authentic wild citron (Narthangai) submerged in traditional natural saltwater brine.</p>
+          </div>
+        </div>
+
+        <!-- Photo 4 -->
+        <div class="gallery-card">
+          <div class="gallery-card-media">
+            <img src="public/images/lemon-curing-drum.png" alt="Lemon pieces with salt crystals inside curing barrel at K.S. FRUITS" loading="lazy">
+          </div>
+          <div class="gallery-card-caption">
+            <span class="gallery-card-tag">Salt Curing</span>
+            <p>Food-grade curing drums layered with selected lemons and pure salt crystals.</p>
+          </div>
+        </div>
+
+        <!-- Photo 5 -->
+        <div class="gallery-card">
+          <div class="gallery-card-media">
+            <img src="public/images/mango-diced-curing.jpg" alt="Diced raw green mango cuts cured in salt at K.S. FRUITS" loading="lazy">
+          </div>
+          <div class="gallery-card-caption">
+            <span class="gallery-card-tag">Precision Cuts</span>
+            <p>Diced green mango pieces layered with pure salt for uniform brine absorption.</p>
+          </div>
+        </div>
+
+        <!-- Photo 6 -->
+        <div class="gallery-card">
+          <div class="gallery-card-media">
+            <img src="public/images/mango-shreds.jpg" alt="Julienned raw mango shreds for commercial brine supply at K.S. FRUITS" loading="lazy">
+          </div>
+          <div class="gallery-card-caption">
+            <span class="gallery-card-tag">Specialized Cut</span>
+            <p>Finely shredded mango cuts prepared for customized commercial brine applications.</p>
           </div>
         </div>
       </div>
 
-      <div class="infra-showcase reverse">
-        <div class="infra-image-wrap">
-          <img src="public/images/mango-diced-curing.jpg" alt="Diced raw mango cured with salt crystals at K.S. FRUITS" width="560" height="360" loading="lazy">
-          <div class="infra-caption-badge">Diced Fruit Brine Preparation</div>
-        </div>
-        <div class="infra-content">
-          <span class="section-subtitle">Food-Grade Preservation</span>
-          <h3>Monitored Diced &amp; Sliced Curing</h3>
-          <p>
-            Processed fruit cuts are cured in heavy-duty food-grade drums and containers. The natural salt curing process maintains fruit firmness and integrity, perfectly prepared for commercial bulk supply to food manufacturers.
-          </p>
-          <div class="infra-points">
-            <div class="infra-point">
-              <span class="infra-point-icon">✓</span>
-              <span>Diced and sliced fruit cuts preserved with natural salt crystals.</span>
-            </div>
-            <div class="infra-point">
-              <span class="infra-point-icon">✓</span>
-              <span>Dedicated curing space in Bargur, Krishnagiri District, Tamil Nadu.</span>
-            </div>
-            <div class="infra-point">
-              <span class="infra-point-icon">✓</span>
-              <span>Ready for commercial dispatch to institutional and food processing buyers.</span>
-            </div>
+      <div style="text-align: center; margin-top: 2.5rem;">
+        <a href="infrastructure.html" class="btn btn-accent btn-md">View Processing Steps &amp; Facility Infrastructure</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section D: WHY CHOOSE KS FRUITS? -->
+  <section class="section section-bg-light" id="why-choose">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Why Choose KS Fruits?</span>
+        <h2 class="section-title">The Trusted Partner for Commercial Fruit Brine</h2>
+        <p class="section-description">
+          We focus on what matters most to commercial food processors: natural ingredients, consistent texture, and honest service.
+        </p>
+      </div>
+
+      <div class="why-choose-grid">
+        <div class="why-card">
+          <div class="why-icon-wrap">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
           </div>
+          <h3>Regional Harvest Advantage</h3>
+          <p>Direct proximity to orchards across Krishnagiri &amp; Dharmapuri ensures fruit is processed fresh, preserving cellular firmness and tart aroma.</p>
+        </div>
+
+        <div class="why-card">
+          <div class="why-icon-wrap">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          </div>
+          <h3>100% Natural Salt Brine</h3>
+          <p>We preserve our fruits using traditional saltwater solution and pure salt crystals—free from synthetic colorants or unverified chemical additives.</p>
+        </div>
+
+        <div class="why-card">
+          <div class="why-icon-wrap">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <h3>Commercial Batch Consistency</h3>
+          <p>Controlled barrel curing and systematic grading ensure uniform salt saturation, dependable texture, and reliable performance in culinary manufacturing.</p>
+        </div>
+
+        <div class="why-card">
+          <div class="why-icon-wrap">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 7h-7L10 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/></svg>
+          </div>
+          <h3>Registered &amp; Compliant</h3>
+          <p>Operated with verified GSTIN (33FMQPK2704G1Z3), open communication via WhatsApp and direct calling, and genuine facility accessibility in Bargur.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Quick Contact CTA Section -->
-  <section class="section" style="background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%); color: #ffffff;">
-    <div class="container text-center" style="text-align: center; max-width: 820px;">
-      <span class="section-subtitle" style="color: var(--color-accent);">Direct Business Communication</span>
-      <h2 class="section-title" style="color: #ffffff; margin-bottom: 1.25rem;">Have a Requirement for Fruit Brine?</h2>
-      <p style="color: #cde2d6; font-size: 1.1rem; line-height: 1.6; margin-bottom: 2.25rem;">
-        Speak directly with our team at Bargur for product availability and commercial supply details. We respond promptly via WhatsApp, telephone, and email.
-      </p>
-      <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 1rem;">
-        <a href="https://wa.me/918489031280?text=Hello%20K.S.%20FRUITS%2C%20I%20am%20interested%20in%20enquiring%20about%20your%20brine%20products." target="_blank" rel="noopener" class="btn btn-whatsapp btn-lg">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.456 5.711 1.457h.004c6.554 0 11.89-5.335 11.893-11.893a11.82 11.82 0 00-3.483-8.413z"/></svg>
-          <span>Chat on WhatsApp</span>
-        </a>
-        <a href="tel:+918489031280" class="btn btn-accent btn-lg">Call +91 8489031280</a>
-        <a href="contact.html" class="btn btn-call btn-lg" style="background: transparent; color: #ffffff; border-color: rgba(255,255,255,0.4);">Open Contact Page</a>
+  <!-- Section E: CONTACT SECTION -->
+  <section class="section" id="contact-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Contact Us</span>
+        <h2 class="section-title">Get in Touch for Bulk Supply Enquiries</h2>
+        <p class="section-description">
+          Contact our team directly for product availability, commercial quantities, or dispatch timelines from our Bargur processing unit.
+        </p>
+      </div>
+
+      <div class="contact-layout">
+        <!-- Contact Information Cards -->
+        <div class="contact-info-panel">
+          <div class="contact-channel-card">
+            <div class="channel-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div class="channel-body">
+              <span class="channel-label">Processing Facility &amp; Registered Address</span>
+              <p class="channel-val">Shop No. 1/465, Godletti Vill, Chinthagampalli PO, Bargur - 635104, Krishnagiri District, Tamil Nadu, India.</p>
+              <div class="facility-badge" style="margin-top: 0.5rem; display: inline-block;">GSTIN: 33FMQPK2704G1Z3</div>
+            </div>
+          </div>
+
+          <div class="contact-channel-card">
+            <div class="channel-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div class="channel-body">
+              <span class="channel-label">Telephone Assistance</span>
+              <p class="channel-val">
+                Primary: <a href="tel:+918489031280" style="color: var(--color-primary); font-weight: 700;">+91 8489031280</a><br>
+                Alternate: <a href="tel:+919790611352" style="color: var(--color-primary); font-weight: 700;">+91 9790611352</a>
+              </p>
+            </div>
+          </div>
+
+          <div class="contact-channel-card">
+            <div class="channel-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div class="channel-body">
+              <span class="channel-label">Official Email</span>
+              <p class="channel-val">
+                <a href="mailto:Ksbrine2023@gmail.com" style="color: var(--color-primary); font-weight: 700;">Ksbrine2023@gmail.com</a>
+              </p>
+            </div>
+          </div>
+
+          <div style="margin-top: 1.5rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+            <a href="https://wa.me/918489031280?text=Hello%20K.S.%20FRUITS%2C%20I%20am%20interested%20in%20enquiring%20about%20your%20brine%20products." target="_blank" rel="noopener" class="btn btn-whatsapp btn-md" style="flex: 1;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.456 5.711 1.457h.004c6.554 0 11.89-5.335 11.893-11.893a11.82 11.82 0 00-3.483-8.413z"/></svg>
+              <span>WhatsApp Message</span>
+            </a>
+            <a href="tel:+918489031280" class="btn btn-call btn-md" style="flex: 1;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span>Call Primary</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Validated Customer Enquiry Form -->
+        <div class="contact-form-panel">
+          <form class="enquiry-form-card" id="business-enquiry-form" novalidate>
+            <h3 class="form-title">Send a Commercial Supply Enquiry</h3>
+            <p class="form-subtitle">Fill out your business requirements below for prompt assistance.</p>
+
+            <div class="form-grid">
+              <!-- Customer Name -->
+              <div class="form-group">
+                <label for="cust-name" class="form-label">Customer / Contact Name <span class="required-star">*</span></label>
+                <input type="text" id="cust-name" name="customerName" class="form-control" placeholder="e.g. Ramesh Kumar" required>
+                <span class="field-error-msg" id="err-cust-name"></span>
+              </div>
+
+              <!-- Company Name -->
+              <div class="form-group">
+                <label for="company-name" class="form-label">Company / Enterprise Name <span class="required-star">*</span></label>
+                <input type="text" id="company-name" name="companyName" class="form-control" placeholder="e.g. Annapoorna Foods" required>
+                <span class="field-error-msg" id="err-company-name"></span>
+              </div>
+
+              <!-- Phone Number -->
+              <div class="form-group">
+                <label for="phone-number" class="form-label">Phone Number <span class="required-star">*</span></label>
+                <input type="tel" id="phone-number" name="phoneNumber" class="form-control" placeholder="e.g. 9876543210" required>
+                <span class="field-error-msg" id="err-phone-number"></span>
+              </div>
+
+              <!-- Email Address -->
+              <div class="form-group">
+                <label for="email-address" class="form-label">Email Address <span class="required-star">*</span></label>
+                <input type="email" id="email-address" name="emailAddress" class="form-control" placeholder="e.g. purchasing@company.com" required>
+                <span class="field-error-msg" id="err-email-address"></span>
+              </div>
+
+              <!-- Product Selection -->
+              <div class="form-group">
+                <label for="product-selection" class="form-label">Product Required <span class="required-star">*</span></label>
+                <select id="product-selection" name="productSelection" class="form-control" required>
+                  <option value="">-- Select Product --</option>
+                  <option value="Mango Brine">Mango Brine</option>
+                  <option value="Lemon Brine">Lemon Brine</option>
+                  <option value="Narthangai Brine">Narthangai Brine</option>
+                  <option value="Multiple Products">Multiple Products</option>
+                </select>
+                <span class="field-error-msg" id="err-product-selection"></span>
+              </div>
+
+              <!-- Required Quantity -->
+              <div class="form-group">
+                <label for="required-quantity" class="form-label">Required Quantity <span class="required-star">*</span></label>
+                <input type="text" id="required-quantity" name="requiredQuantity" class="form-control" placeholder="e.g. 5 Barrels / 2 Tonnes" required>
+                <span class="field-error-msg" id="err-required-quantity"></span>
+              </div>
+            </div>
+
+            <!-- Message Field -->
+            <div class="form-group" style="margin-top: 1.25rem;">
+              <label for="enquiry-message" class="form-label">Supply Requirements / Message <span class="required-star">*</span></label>
+              <textarea id="enquiry-message" name="enquiryMessage" class="form-control" rows="4" placeholder="Please specify delivery location, expected delivery timeline, and specific cut requirements..." required></textarea>
+              <span class="field-error-msg" id="err-enquiry-message"></span>
+            </div>
+
+            <div class="form-submit-row">
+              <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+                Submit Commercial Enquiry
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   </section>
@@ -336,164 +602,160 @@
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
-        <!-- Col 1: Brand Info -->
         <div class="footer-brand-col">
           <img src="assets/images/logo.svg" alt="K.S. FRUITS Logo" width="220" height="55" style="filter: brightness(0) invert(1);">
           <p>
             K.S. FRUITS is a fruit-processing and brine-products enterprise based in Bargur, Krishnagiri District, Tamil Nadu. Specializing in high-standard Mango Brine, Lemon Brine, and Narthangai Brine.
           </p>
-          <div style="margin-top: 1rem; color: #ffde82; font-size: 0.85rem; font-weight: 600;">
+          <div class="facility-badge" style="background: rgba(255,255,255,0.08); color: #ffde82; border-color: rgba(229,168,18,0.3);">
             GSTIN: 33FMQPK2704G1Z3
           </div>
         </div>
 
-        <!-- Col 2: Navigation Links -->
         <div class="footer-nav-col">
-          <h4 class="footer-col-title">Quick Links</h4>
-          <ul class="footer-nav-list">
+          <h4 class="footer-heading">Quick Navigation</h4>
+          <ul class="footer-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About Us</a></li>
-            <li><a href="products.html">Our Products</a></li>
-            <li><a href="infrastructure.html">Processing &amp; Infrastructure</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="infrastructure.html">Our Infrastructure</a></li>
             <li><a href="contact.html">Contact Us</a></li>
           </ul>
         </div>
 
-        <!-- Col 3: Products -->
         <div class="footer-nav-col">
-          <h4 class="footer-col-title">Brine Products</h4>
-          <ul class="footer-nav-list">
+          <h4 class="footer-heading">Brine Products</h4>
+          <ul class="footer-links">
             <li><a href="products.html#mango">Mango Brine</a></li>
             <li><a href="products.html#lemon">Lemon Brine</a></li>
-            <li><a href="products.html#narthangai">Narthangai Brine (Citron)</a></li>
+            <li><a href="products.html#narthangai">Narthangai Brine</a></li>
           </ul>
         </div>
 
-        <!-- Col 4: Contact Details -->
         <div class="footer-contact-col">
-          <h4 class="footer-col-title">Contact Office</h4>
-          <div class="footer-contact-info">
-            <div class="footer-contact-row">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              <span>Shop No. 1/465, Godletti Vill, Chinthagampalli PO, Bargur - 635104, Krishnagiri District, Tamil Nadu, India.</span>
+          <h4 class="footer-heading">Facility Contact</h4>
+          <div class="footer-contact-row">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Shop No. 1/465, Godletti Vill, Chinthagampalli PO, Bargur - 635104, Krishnagiri District, Tamil Nadu</span>
+          </div>
+          <div class="footer-contact-row">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <div>
+              <a href="tel:+918489031280">+91 8489031280</a><br>
+              <a href="tel:+919790611352">+91 9790611352</a>
             </div>
-            <div class="footer-contact-row">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-              <div>
-                <a href="tel:+918489031280" style="color: #ffffff; display: block;">+91 8489031280</a>
-                <a href="tel:+919790611352" style="color: #c5dbcf; display: block;">+91 9790611352</a>
-              </div>
-            </div>
-            <div class="footer-contact-row">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-              <a href="mailto:Ksbrine2023@gmail.com" style="color: #ffde82;">Ksbrine2023@gmail.com</a>
-            </div>
+          </div>
+          <div class="footer-contact-row">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <a href="mailto:Ksbrine2023@gmail.com">Ksbrine2023@gmail.com</a>
           </div>
         </div>
       </div>
 
       <div class="footer-bottom">
         <div class="footer-bottom-inner">
-          <p>&copy; <span class="dynamic-year">2026</span> K.S. FRUITS. All rights reserved. Commercial Fruit Processing &amp; Brine Products.</p>
-          <p>Location: Bargur, Krishnagiri District, Tamil Nadu | GSTIN: 33FMQPK2704G1Z3</p>
+          <p>&copy; <span class="dynamic-year"></span> K.S. FRUITS. All Rights Reserved. Fruit Processing &amp; Brine Products.</p>
+          <p>Bargur, Krishnagiri District, Tamil Nadu, India.</p>
         </div>
       </div>
     </div>
   </footer>
 
-  <!-- Mobile Sticky Floating Contact Bar -->
-  <aside class="mobile-sticky-bar" aria-label="Mobile Quick Contact">
-    <div class="mobile-sticky-inner">
-      <a href="https://wa.me/918489031280?text=Hello%20K.S.%20FRUITS%2C%20I%20am%20interested%20in%20enquiring%20about%20your%20brine%20products." target="_blank" rel="noopener" class="btn btn-whatsapp btn-sm">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.456 5.711 1.457h.004c6.554 0 11.89-5.335 11.893-11.893a11.82 11.82 0 00-3.483-8.413z"/></svg>
-        <span>WhatsApp</span>
-      </a>
-      <a href="tel:+918489031280" class="btn btn-call btn-sm">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        <span>Call Now</span>
-      </a>
-    </div>
-  </aside>
+  <!-- Mobile Floating Action Bar -->
+  <div class="mobile-bottom-bar" aria-label="Mobile Quick Action Bar">
+    <a href="https://wa.me/918489031280?text=Hello%20K.S.%20FRUITS%2C%20I%20am%20interested%20in%20enquiring%20about%20your%20brine%20products." target="_blank" rel="noopener" class="mobile-bottom-btn mobile-whatsapp-btn">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.456 5.711 1.457h.004c6.554 0 11.89-5.335 11.893-11.893a11.82 11.82 0 00-3.483-8.413z"/></svg>
+      <span>WhatsApp</span>
+    </a>
+    <a href="tel:+918489031280" class="mobile-bottom-btn mobile-call-btn">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <span>Call Now</span>
+    </a>
+  </div>
 
-  <!-- Quick Quote Modal -->
-  <div class="modal-overlay" id="quick-quote-modal" role="dialog" aria-modal="true" aria-labelledby="modal-quote-title">
+  <!-- Honest Backend Explanation Modal -->
+  <div class="modal-backdrop" id="backend-notice-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
     <div class="modal-box">
-      <button class="modal-close-btn" aria-label="Close modal">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-      </button>
-      <div class="modal-icon-header">
-        <div class="modal-badge-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <h3 id="modal-title">Commercial Enquiry Routing</h3>
+          <p>Direct Connection to K.S. FRUITS Management</p>
         </div>
-        <div>
-          <h3 id="modal-quote-title">Quick Commercial Enquiry</h3>
-          <p style="font-size: 0.85rem; color: var(--color-text-muted);">K.S. FRUITS • Bargur, Tamil Nadu</p>
+        <button class="modal-close-btn" aria-label="Close modal">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-alert-box">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          <div class="modal-alert-text">
+            <strong>Static Website Dispatch Notice:</strong>
+            <p>This website runs on a static hosting architecture. To ensure your enquiry is delivered immediately to our management without backend server delay, please click below to send your pre-filled enquiry directly via WhatsApp or Email.</p>
+          </div>
+        </div>
+
+        <h4 style="font-size: 0.95rem; margin-bottom: 0.75rem; color: var(--color-primary-dark);">Your Enquiry Summary:</h4>
+        <div class="enquiry-preview-card" id="enquiry-preview-content">
+          <!-- Populated by JS -->
+        </div>
+
+        <div class="modal-actions-list">
+          <a href="#" id="modal-whatsapp-send-btn" target="_blank" rel="noopener" class="btn btn-whatsapp btn-lg" style="width: 100%; justify-content: center;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.456 5.711 1.457h.004c6.554 0 11.89-5.335 11.893-11.893a11.82 11.82 0 00-3.483-8.413z"/></svg>
+            <span>Deliver Directly via WhatsApp</span>
+          </a>
+          <a href="#" id="modal-email-send-btn" class="btn btn-call btn-md" style="width: 100%; justify-content: center;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <span>Send as Email (Ksbrine2023@gmail.com)</span>
+          </a>
         </div>
       </div>
-      <form id="quick-quote-form" style="display: flex; flex-direction: column; gap: 1rem;">
-        <div>
-          <label class="form-label" for="quick-name">Your Full Name <span class="req">*</span></label>
-          <input type="text" id="quick-name" class="form-input" placeholder="e.g. Ramesh Kumar" required>
-        </div>
-        <div>
-          <label class="form-label" for="quick-phone">Contact Phone / WhatsApp Number <span class="req">*</span></label>
-          <input type="tel" id="quick-phone" class="form-input" placeholder="e.g. 9876543210" required>
-        </div>
-        <div>
-          <label class="form-label" for="modal-product-select">Product Selection <span class="req">*</span></label>
-          <select id="modal-product-select" class="form-select" required>
-            <option value="Mango Brine">Mango Brine</option>
-            <option value="Lemon Brine">Lemon Brine</option>
-            <option value="Narthangai Brine">Narthangai Brine (Citron Brine)</option>
-            <option value="Multiple Products">Multiple Products</option>
-          </select>
-        </div>
-        <div>
-          <label class="form-label" for="quick-quantity">Approximate Quantity <span class="req">*</span></label>
-          <input type="text" id="quick-quantity" class="form-input" placeholder="e.g. 500 kg, 5 drums, or 2 tons" required>
-        </div>
-        <div>
-          <label class="form-label" for="quick-notes">Message / Delivery Location</label>
-          <input type="text" id="quick-notes" class="form-input" placeholder="e.g. Need delivery to Chennai food unit">
-        </div>
-        <button type="submit" class="btn btn-primary" style="margin-top: 0.5rem;">Proceed with Enquiry</button>
-      </form>
     </div>
   </div>
 
-  <!-- Honest Backend Notice Modal (Never falsely claims email delivery) -->
-  <div class="modal-overlay" id="backend-notice-modal" role="dialog" aria-modal="true" aria-labelledby="backend-modal-title">
+  <!-- Quick Quote Modal -->
+  <div class="modal-backdrop" id="quick-quote-modal" role="dialog" aria-modal="true" aria-labelledby="quote-modal-title">
     <div class="modal-box">
-      <button class="modal-close-btn" aria-label="Close modal">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-      </button>
-      <div class="modal-icon-header">
-        <div class="modal-badge-icon" style="background-color: #fef7e6; color: #d99000;">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <h3 id="quote-modal-title">Request Bulk Supply Quote</h3>
+          <p>K.S. FRUITS • Commercial Fruit Brine</p>
         </div>
-        <div>
-          <h3 id="backend-modal-title">Enquiry Ready to Transmit</h3>
-          <p style="font-size: 0.825rem; color: var(--color-text-muted);">Direct transmission instructions</p>
-        </div>
-      </div>
-      
-      <p class="modal-explanation">
-        <strong>Important Notice:</strong> This website is currently running as a static frontend interface without an automated server backend configured. To ensure your enquiry is delivered immediately to K.S. FRUITS without delay or loss, please choose one of the direct contact channels below:
-      </p>
-
-      <div class="enquiry-summary-preview" id="modal-enquiry-preview">
-        <!-- Injected via JavaScript -->
-      </div>
-
-      <div class="modal-action-buttons">
-        <button id="modal-wa-send-btn" class="btn btn-whatsapp btn-lg" style="width: 100%;">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.456 5.711 1.457h.004c6.554 0 11.89-5.335 11.893-11.893a11.82 11.82 0 00-3.483-8.413z"/></svg>
-          <span>Send Details via WhatsApp (+91 8489031280)</span>
+        <button class="modal-close-btn" aria-label="Close modal">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
         </button>
-        <a id="modal-email-send-btn" href="mailto:Ksbrine2023@gmail.com" class="btn btn-outline-primary" style="width: 100%;">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          <span>Open Email Client (Ksbrine2023@gmail.com)</span>
-        </a>
+      </div>
+      <div class="modal-body">
+        <form id="quick-quote-form">
+          <div class="form-group" style="margin-bottom: 1rem;">
+            <label for="quick-name" class="form-label">Contact / Company Name *</label>
+            <input type="text" id="quick-name" class="form-control" placeholder="e.g. Anand Kumar, Krishna Foods" required>
+          </div>
+          <div class="form-group" style="margin-bottom: 1rem;">
+            <label for="quick-phone" class="form-label">Phone Number *</label>
+            <input type="tel" id="quick-phone" class="form-control" placeholder="e.g. 9876543210" required>
+          </div>
+          <div class="form-group" style="margin-bottom: 1rem;">
+            <label for="modal-product-select" class="form-label">Selected Product *</label>
+            <select id="modal-product-select" class="form-control" required>
+              <option value="Mango Brine">Mango Brine</option>
+              <option value="Lemon Brine">Lemon Brine</option>
+              <option value="Narthangai Brine">Narthangai Brine</option>
+              <option value="Multiple Products">Multiple Products</option>
+            </select>
+          </div>
+          <div class="form-group" style="margin-bottom: 1rem;">
+            <label for="quick-quantity" class="form-label">Required Quantity *</label>
+            <input type="text" id="quick-quantity" class="form-control" placeholder="e.g. 20 Barrels" required>
+          </div>
+          <div class="form-group" style="margin-bottom: 1.5rem;">
+            <label for="quick-notes" class="form-label">Additional Instructions / Cut Preference</label>
+            <textarea id="quick-notes" class="form-control" rows="2" placeholder="e.g. Delivery needed in Bargur / Chennai..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+            Proceed with Quote Enquiry
+          </button>
+        </form>
       </div>
     </div>
   </div>
