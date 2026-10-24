@@ -7,6 +7,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   initMobileMenu();
   initHeaderScroll();
+  initHomepageCarousel();
   initProductEnquiries();
   initEnquiryForm();
   initQuickQuoteModal();
@@ -53,6 +54,132 @@ function initHeaderScroll() {
 
   window.addEventListener('scroll', handleScroll, { passive: true });
   handleScroll();
+}
+
+/* ==========================================================================
+   Homepage Image Carousel
+   ========================================================================== */
+function initHomepageCarousel() {
+  const carousel = document.querySelector('[data-home-carousel], .hero-slider-section');
+  if (!carousel) return;
+
+  const slides = Array.from(carousel.querySelectorAll('[data-carousel-slide], .hero-slide'));
+  const currentCount = carousel.querySelector('[data-carousel-current]');
+  const previousButton = carousel.querySelector('[data-carousel-prev], .hero-arrow-prev');
+  const nextButton = carousel.querySelector('[data-carousel-next], .hero-arrow-next');
+  const dots = Array.from(carousel.querySelectorAll('.hero-dot, [data-carousel-dot]'));
+
+  if (slides.length < 2) return;
+
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let activeIndex = slides.findIndex((slide) => slide.classList.contains('is-active') || slide.classList.contains('active'));
+  let timer;
+  let isPaused = false;
+
+  if (activeIndex < 0) activeIndex = 0;
+
+  const showSlide = (index) => {
+    activeIndex = (index + slides.length) % slides.length;
+    slides.forEach((slide, slideIndex) => {
+      const isActive = slideIndex === activeIndex;
+      slide.classList.toggle('is-active', isActive);
+      slide.classList.toggle('active', isActive);
+    });
+    if (dots.length) {
+      dots.forEach((dot, dotIndex) => {
+        dot.classList.toggle('active', dotIndex === activeIndex);
+      });
+    }
+    if (currentCount) {
+      currentCount.textContent = String(activeIndex + 1).padStart(2, '0');
+    }
+  };
+
+  const stopRotation = () => {
+    window.clearInterval(timer);
+  };
+
+  const startRotation = () => {
+    stopRotation();
+    if (!reducedMotion && !isPaused && !document.hidden) {
+      timer = window.setInterval(() => showSlide(activeIndex + 1), 5000);
+    }
+  };
+
+  if (previousButton) {
+    previousButton.addEventListener('click', (e) => {
+      e.preventDefault();
+      showSlide(activeIndex - 1);
+      startRotation();
+    });
+  }
+
+  if (nextButton) {
+    nextButton.addEventListener('click', (e) => {
+      e.preventDefault();
+      showSlide(activeIndex + 1);
+      startRotation();
+    });
+  }
+
+  dots.forEach((dot, dotIndex) => {
+    dot.addEventListener('click', (e) => {
+      e.preventDefault();
+      showSlide(dotIndex);
+      startRotation();
+    });
+  });
+
+  carousel.addEventListener('mouseenter', () => {
+    isPaused = true;
+    stopRotation();
+  });
+
+  carousel.addEventListener('mouseleave', () => {
+    isPaused = false;
+    startRotation();
+  });
+
+  carousel.addEventListener('focusin', () => {
+    isPaused = true;
+    stopRotation();
+  });
+
+  carousel.addEventListener('focusout', (event) => {
+    if (!carousel.contains(event.relatedTarget)) {
+      isPaused = false;
+      startRotation();
+    }
+  });
+
+  // Mobile Touch Swipe support
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  carousel.addEventListener('touchstart', (e) => {
+    if (e.changedTouches && e.changedTouches[0]) {
+      touchStartX = e.changedTouches[0].screenX;
+    }
+  }, { passive: true });
+
+  carousel.addEventListener('touchend', (e) => {
+    if (e.changedTouches && e.changedTouches[0]) {
+      touchEndX = e.changedTouches[0].screenX;
+      const diff = touchEndX - touchStartX;
+      if (Math.abs(diff) > 40) {
+        if (diff < 0) {
+          showSlide(activeIndex + 1);
+        } else {
+          showSlide(activeIndex - 1);
+        }
+        startRotation();
+      }
+    }
+  }, { passive: true });
+
+  document.addEventListener('visibilitychange', startRotation);
+  showSlide(activeIndex);
+  startRotation();
 }
 
 /* ==========================================================================

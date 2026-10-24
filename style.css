@@ -538,6 +538,242 @@ button, input, select, textarea {
 }
 
 /* ==========================================================================
+   Homepage Image Carousel
+   ========================================================================== */
+.home-hero {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+  min-height: clamp(520px, 58vw, 700px);
+  overflow: hidden;
+  color: #ffffff;
+  background-color: var(--color-primary-dark);
+  clip-path: polygon(0 0, 100% 0, 100% 91%, 0 100%);
+}
+
+.home-hero-slides,
+.home-hero-slide,
+.home-hero-slide img,
+.home-hero-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.home-hero-slides {
+  z-index: 0;
+}
+
+.home-hero-slide {
+  opacity: 0;
+  transition: opacity 800ms ease;
+}
+
+.home-hero-slide.is-active {
+  opacity: 1;
+}
+
+.home-hero-slide img {
+  object-fit: cover;
+  object-position: center 48%;
+  transform: scale(1);
+  transition: transform 7s ease;
+}
+
+.home-hero-slide.is-active img {
+  transform: scale(1.045);
+}
+
+.home-hero-overlay {
+  z-index: 1;
+  background:
+    linear-gradient(90deg, rgba(5, 32, 19, 0.88) 0%, rgba(7, 37, 23, 0.72) 43%, rgba(7, 37, 23, 0.16) 100%),
+    linear-gradient(0deg, rgba(5, 32, 19, 0.3), transparent 55%);
+}
+
+.home-hero-content {
+  position: relative;
+  z-index: 2;
+  padding-top: 4rem;
+  padding-bottom: 7rem;
+}
+
+.home-hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: 1.25rem;
+  color: #f6d77f;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+}
+
+.home-hero-content h1 {
+  max-width: 760px;
+  margin-bottom: 1.25rem;
+  color: #ffffff;
+  font-size: clamp(2.8rem, 5.5vw, 5rem);
+  font-weight: 800;
+  letter-spacing: -0.045em;
+  line-height: 1.06;
+}
+
+.home-hero-content h1 span {
+  color: #f1c34e;
+}
+
+.home-hero-content > p {
+  max-width: 570px;
+  margin-bottom: 2rem;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: clamp(1rem, 1.5vw, 1.15rem);
+  line-height: 1.75;
+}
+
+.home-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+}
+
+.home-hero-contact {
+  border-color: rgba(255, 255, 255, 0.72);
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.home-hero-contact:hover {
+  border-color: #ffffff;
+  color: var(--color-primary-dark);
+  background: #ffffff;
+}
+
+.home-hero-controls {
+  position: absolute;
+  z-index: 2;
+  right: max(1.5rem, calc((100vw - 1240px) / 2 + 1.5rem));
+  bottom: 10%;
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.home-hero-arrow {
+  display: inline-flex;
+  width: 46px;
+  height: 46px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  color: #ffffff;
+  background: rgba(7, 37, 23, 0.35);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.home-hero-arrow:hover {
+  border-color: #f1c34e;
+  color: var(--color-primary-dark);
+  background: #f1c34e;
+}
+
+.home-hero-arrow svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+}
+
+.home-hero-count {
+  min-width: 58px;
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-align: center;
+}
+
+.home-hero :focus-visible {
+  outline: 3px solid #f1c34e;
+  outline-offset: 4px;
+}
+
+@media (max-width: 768px) {
+  .home-hero {
+    min-height: 590px;
+    clip-path: polygon(0 0, 100% 0, 100% 94%, 0 100%);
+  }
+
+  .home-hero-slide img {
+    object-position: 58% center;
+  }
+
+  .home-hero-overlay {
+    background:
+      linear-gradient(90deg, rgba(5, 32, 19, 0.88), rgba(7, 37, 23, 0.5)),
+      linear-gradient(0deg, rgba(5, 32, 19, 0.44), transparent 70%);
+  }
+
+  .home-hero-content {
+    padding-top: 2rem;
+    padding-bottom: 6rem;
+  }
+
+  .home-hero-content h1 {
+    max-width: 600px;
+    font-size: clamp(2.55rem, 10vw, 4rem);
+  }
+
+  .home-hero-controls {
+    right: 1.5rem;
+    bottom: 7%;
+    gap: 0.65rem;
+  }
+
+  .home-hero-arrow {
+    width: 42px;
+    height: 42px;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-hero {
+    min-height: 560px;
+  }
+
+  .home-hero-eyebrow {
+    font-size: 0.68rem;
+    letter-spacing: 0.11em;
+  }
+
+  .home-hero-actions {
+    align-items: stretch;
+    flex-direction: column;
+    max-width: 260px;
+  }
+
+  .home-hero-controls {
+    right: 1.25rem;
+    bottom: 6.5%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-hero-slide,
+  .home-hero-slide img,
+  .home-hero-arrow {
+    transition: none;
+  }
+}
+
+/* ==========================================================================
    Page Headers (Internal Pages)
    ========================================================================== */
 .page-header {

@@ -7,6 +7,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   initMobileMenu();
   initHeaderScroll();
+  initHomepageCarousel();
   initProductEnquiries();
   initEnquiryForm();
   initQuickQuoteModal();
@@ -53,6 +54,83 @@ function initHeaderScroll() {
 
   window.addEventListener('scroll', handleScroll, { passive: true });
   handleScroll();
+}
+
+/* ==========================================================================
+   Homepage Image Carousel
+   ========================================================================== */
+function initHomepageCarousel() {
+  const carousel = document.querySelector('[data-home-carousel]');
+  if (!carousel) return;
+
+  const slides = Array.from(carousel.querySelectorAll('[data-carousel-slide]'));
+  const currentCount = carousel.querySelector('[data-carousel-current]');
+  const previousButton = carousel.querySelector('[data-carousel-prev]');
+  const nextButton = carousel.querySelector('[data-carousel-next]');
+
+  if (slides.length < 2 || !currentCount || !previousButton || !nextButton) return;
+
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let activeIndex = slides.findIndex((slide) => slide.classList.contains('is-active'));
+  let timer;
+  let isPaused = false;
+
+  if (activeIndex < 0) activeIndex = 0;
+
+  const showSlide = (index) => {
+    activeIndex = (index + slides.length) % slides.length;
+    slides.forEach((slide, slideIndex) => {
+      slide.classList.toggle('is-active', slideIndex === activeIndex);
+    });
+    currentCount.textContent = String(activeIndex + 1).padStart(2, '0');
+  };
+
+  const stopRotation = () => {
+    window.clearInterval(timer);
+  };
+
+  const startRotation = () => {
+    stopRotation();
+    if (!reducedMotion && !isPaused && !document.hidden) {
+      timer = window.setInterval(() => showSlide(activeIndex + 1), 6000);
+    }
+  };
+
+  previousButton.addEventListener('click', () => {
+    showSlide(activeIndex - 1);
+    startRotation();
+  });
+
+  nextButton.addEventListener('click', () => {
+    showSlide(activeIndex + 1);
+    startRotation();
+  });
+
+  carousel.addEventListener('mouseenter', () => {
+    isPaused = true;
+    stopRotation();
+  });
+
+  carousel.addEventListener('mouseleave', () => {
+    isPaused = false;
+    startRotation();
+  });
+
+  carousel.addEventListener('focusin', () => {
+    isPaused = true;
+    stopRotation();
+  });
+
+  carousel.addEventListener('focusout', (event) => {
+    if (!carousel.contains(event.relatedTarget)) {
+      isPaused = false;
+      startRotation();
+    }
+  });
+
+  document.addEventListener('visibilitychange', startRotation);
+  showSlide(activeIndex);
+  startRotation();
 }
 
 /* ==========================================================================
